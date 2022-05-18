@@ -6,19 +6,19 @@ group = "self.lol"
 version = "1.0-SNAPSHOT"
 
 repositories {
+    maven ("https://oss.sonatype.org/content/repositories/snapshots")
     mavenCentral()
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
 }
 
-repositories {
-    mavenCentral()
-}
+
 dependencies {
-    implementation("net.dv8tion:JDA:5.0.0-alpha.11")
+    implementation ("com.discord4j:discord4j-core:3.2.3-SNAPSHOT")
+
 }
 
 tasks.getByName<Test>("test") {
